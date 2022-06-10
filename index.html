@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Marson events</title>
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <header>
+        <h1>Events of marson parulian</h1>
+        <p>Events related to eyes problem and professional history of Marson Parulian</p>
+    </header>
+    <main>
+        <div id="app">
+            <div id="event-filter"></div>
+            <div id="event-list"></div>
+        </div>
+    </main>
+    <!--
+    <div id="app">
+        <main>
+            <div id="movies-filter">
+                <input v-model="filterText" placeholder="Filter movies.." />
+            </div>
+
+            <div id="movie-list">
+                <h2>Movies</h2>
+                <div v-for="m in filteredMovies">
+                    <movie-compact :title="m.title" :shortDesc="m.shortDesc"></movie-compact>
+                </div>
+            </div>
+        </main>
+    </div>
+-->
+
+    <script type="module">
+        const { createApp, computed } = Vue;
+
+        createApp({
+            components: {
+            },
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    filterText: '',
+                    movies: [
+                        { title: 'Apple', shortDesc: 'Short description of this movie.' },
+                        { title: 'Watermelon', shortDesc: 'Another short description..' },
+                    ],
+                    filteredMovies: computed(() => {
+                        const t = this.filterText.trim();
+
+                        // Return all `movies` if filter text is falsy.
+                        if (!t) return this.movies;
+
+                        // Apply filter
+                        const p = new RegExp(this.filterText, 'i');
+                        return this.movies.filter((m) => {
+                            return m.title.match(p);
+                        });
+                    }),
+                };
+            }
+        }).mount('#app')
+    </script>
+
+</body>
+
+</html>
