@@ -1,0 +1,22 @@
+{
+  "name": "marson-events",
+  "version": "1.0.0",
+  "description": "Recent events of marson parulian",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsonparulian/marson-events.git"
+  },
+  "author": "marson.parulian@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marsonparulian/marson-events/issues"
+  },
+  "homepage": "https://github.com/marsonparulian/marson-events#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
